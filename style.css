@@ -54,6 +54,8 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
+    min-height: 70vh;
+    position: relative;
     text-align: center;
     padding: 120px 20px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
