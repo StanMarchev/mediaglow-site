@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медия Глоу Дизайн</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Медия Глоу Дизайн">
+    </div>
+    <nav>
+        <a href="#" data-key="nav-home">Начало</a>
+        <a href="#about" data-key="nav-about">За нас</a>
+        <a href="#services" data-key="nav-services">Услуги</a>
+        <a href="#projects" data-key="nav-projects">Проекти</a>
+        <a href="#contact" data-key="nav-contact">Контакт</a>
+        <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 data-key="hero-title">МЕДИЯ ГЛОУ ДИЗАЙН</h1>
+    <h2>MEDIA GLOW DESIGN</h2>
+    <p data-key="hero-subtitle">Медийни стени и камини с модерен дизайн</p>
+    <a href="#services" class="btn" data-key="hero-btn">НАУЧЕТЕ ПОВЕЧЕ</a>
+</section>
+
+<section id="about">
+    <h2 data-key="about-title">За нас</h2>
+    <p data-key="about-text">Ние предлагаме индивидуален подход при създаването на медийни стени и камини, съчетавайки модерна визия и функционалност.</p>
+</section>
+
+<section id="services">
+    <h2 data-key="services-title">Нашите услуги</h2>
+    <div class="services">
+        <div class="service">
+            <h3 data-key="service1-title">Проектиране</h3>
+            <p data-key="service1-text">Създаване на уникални медия стени по поръчка.</p>
+        </div>
+        <div class="service">
+            <h3 data-key="service2-title">Изграждане</h3>
+            <p data-key="service2-text">Професионален монтаж и изработка.</p>
+        </div>
+        <div class="service">
+            <h3 data-key="service3-title">Дизайн</h3>
+            <p data-key="service3-text">Съвременни решения за вашия интериор.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 data-key="projects-title">Нашите проекти</h2>
+    <p data-key="projects-text">Скоро ще добавим снимки на завършени обекти.</p>
+</section>
+
+<section id="contact">
+    <h2 data-key="contact-title">Контакт</h2>
+    <p data-key="contact-text">Свържете се с нас на: info@mediaglow.com</p>
+</section>
+
+<footer>
+    <span data-key="footer-text">© 2025 Медия Глоу Дизайн – Всички права запазени.</span>
+</footer>
+
+<script>
+    const translations = {
+        bg: {
+            "nav-home": "Начало",
+            "nav-about": "За нас",
+            "nav-services": "Услуги",
+            "nav-projects": "Проекти",
+            "nav-contact": "Контакт",
+            "hero-title": "МЕДИЯ ГЛОУ ДИЗАЙН",
+            "hero-subtitle": "Медийни стени и камини с модерен дизайн",
+            "hero-btn": "НАУЧЕТЕ ПОВЕЧЕ",
+            "about-title": "За нас",
+            "about-text": "Ние предлагаме индивидуален подход при създаването на медийни стени и камини, съчетавайки модерна визия и функционалност.",
+            "services-title": "Нашите услуги",
+            "service1-title": "Проектиране",
+            "service1-text": "Създаване на уникални медия стени по поръчка.",
+            "service2-title": "Изграждане",
+            "service2-text": "Професионален монтаж и изработка.",
+            "service3-title": "Дизайн",
+            "service3-text": "Съвременни решения за вашия интериор.",
+            "projects-title": "Нашите проекти",
+            "projects-text": "Скоро ще добавим снимки на завършени обекти.",
+            "contact-title": "Контакт",
+            "contact-text": "Свържете се с нас на: info@mediaglow.com",
+            "footer-text": "© 2025 Медия Глоу Дизайн – Всички права запазени."
+        },
+        en: {
+            "nav-home": "Home",
+            "nav-about": "About Us",
+            "nav-services": "Services",
+            "nav-projects": "Projects",
+            "nav-contact": "Contact",
+            "hero-title": "MEDIA GLOW DESIGN",
+            "hero-subtitle": "Media walls and fireplaces with modern design",
+            "hero-btn": "LEARN MORE",
+            "about-title": "About Us",
+            "about-text": "We offer a personalized approach to creating media walls and fireplaces, combining modern vision and functionality.",
+            "services-title": "Our Services",
+            "service1-title": "Design Planning",
+            "service1-text": "Creating unique custom media walls.",
+            "service2-title": "Construction",
+            "service2-text": "Professional installation and build.",
+            "service3-title": "Interior Design",
+            "service3-text": "Contemporary solutions for your home.",
+            "projects-title": "Our Projects",
+            "projects-text": "Photos of completed projects coming soon.",
+            "contact-title": "Contact",
+            "contact-text": "Get in touch: info@mediaglow.com",
+            "footer-text": "© 2025 Media Glow Design – All rights reserved."
+        }
+    };
+
+    let currentLang = "bg";
+
+    function toggleLanguage() {
+        currentLang = currentLang === "bg" ? "en" : "bg";
+        document.querySelectorAll("[data-key]").forEach(el => {
+            el.textContent = translations[currentLang][el.getAttribute("data-key")];
+        });
+        document.querySelector(".lang-btn").textContent = currentLang === "bg" ? "EN" : "BG";
+    }
+</script>
+
+</body>
+</html>
