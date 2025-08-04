@@ -118,16 +118,43 @@ footer {
     padding: 15px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
-    .logo img {
-        height: 60px;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
     }
+
     nav {
+        flex-direction: column;
         gap: 10px;
-        flex-wrap: wrap;
+        align-items: flex-start;
     }
+
     .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
     }
 }
