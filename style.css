@@ -118,7 +118,6 @@ footer {
     padding: 15px;
 }
 
-
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap;
@@ -153,3 +152,93 @@ footer {
     background-position: center center;
     background-size: contain;
 }
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 300px;
+}
+
+.project img {
+    width: 100%;
+    display: block;
+}
+
+.project p {
+    padding: 10px;
+    color: orange;
+    font-weight: bold;
+}
+.about-container {
+    max-width: 900px; /* ограничаваме ширината */
+    margin: 0 auto; /* центрираме */
+    text-align: center; /* центрираме текста */
+    padding: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+}
+.section--narrow {
+  width: min(900px, 92%);
+  margin-inline: auto;
+  text-align: left;
+  padding: 40px 20px;
+}
+
+#about h2, #about h3 {
+  color: orange;
+  margin-top: 20px;
+}
+
+#about p, #about li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+#about ul, #about ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* за мобилни устройства */
+    justify-content: center;
+}
+
+.project {
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: 250px; /* еднаква височина за всички */
+    object-fit: cover; /* запазва пропорциите, изрязва излишното */
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
