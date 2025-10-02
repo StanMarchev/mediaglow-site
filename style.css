@@ -19,6 +19,12 @@ header {
 
 .logo img {
     height: 80px;
+    width: auto;
+    filter: brightness(1.1);
+    border-radius: 45%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(255,111,60,0.7);
+    
 }
 
 nav {
@@ -137,6 +143,7 @@ footer {
 
     .logo img {
         height: 60px;
+        
     }
 
     .hero h1 {
